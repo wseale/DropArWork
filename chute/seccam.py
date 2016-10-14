@@ -82,11 +82,13 @@ def detectMotion(img1, jpg2):
 
     # Now compute the difference
     diff = PIL.ImageChops.difference(jpg1, jpg2)
+    diff = PIL.ImageChops.invert(diff)
+    outJpg= PIL.ImageChops.multiply(jpg1, diff) 
     h = diff.histogram()
     sq = (value*((idx%256)**2) for idx, value in enumerate(h))
     sum_sqs = sum(sq)
     rms = math.sqrt(sum_sqs / float(jpg1.size[0] * jpg1.size[1]))
-    return (rms,jpg1)
+    return (rms,outJpg)
 
 
 
