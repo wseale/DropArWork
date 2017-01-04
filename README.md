@@ -2,7 +2,7 @@
 
 Security Camera Chute
 
-## Catagory: Security, Computer Vision
+## Category: Security, Computer Vision
 
 Requirements:
 * Wireless security cam that can connect to the Paradrop router.
