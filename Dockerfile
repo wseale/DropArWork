@@ -1,7 +1,8 @@
 # Security Cam v2
 #  - Finds ip address webcam - used for detecting motion
 # Version 1.10.00
-FROM ddvtech/mistserver
+FROM paradrop/workshop
+#FROM ddvtech/mistserver
 
 # Apache site configuration
 #ADD chute/000-default.conf /etc/apache2/sites-available/
