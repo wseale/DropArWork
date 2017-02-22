@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Create the image cache directory
-mkdir -p /var/www/html/motionLog
-chmod a+rw /var/www/html/motionLog
+#mkdir -p /var/www/html/motionLog
+#chmod a+rw /var/www/html/motionLog
 
 # Execute the file, one pic every 2 seconds
 #python /usr/local/bin/seccam.py -m_sec 2.0 > seccam.log 2> seccam.err &
 
 # Add the symlink
-ln -s --relative /var/www/html/motionLog /var/www/html/app-dist/
+#ln -s --relative /var/www/html/motionLog /var/www/html/app-dist/
 
 # Allow client traffic for development
 #iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
