@@ -6,10 +6,10 @@
 FROM r0gger/mistserver
 
 # Apache site configuration
-#ADD chute/000-default.conf /etc/apache2/sites-available/
+ADD chute/000-default.conf /etc/apache2/sites-available/
 
 #  Get the web frontend
-#ADD chute/web /var/www/html
+ADD chute/web /var/www/html
 
 # Install files required by the chute.
 #
@@ -19,7 +19,7 @@ FROM r0gger/mistserver
 ADD chute/run.sh /usr/local/bin/run.sh
 
 # Set the work dir for nodejs photo server
-#WORKDIR "/var/www/html"
+WORKDIR "/var/www/html"
 
 EXPOSE 8080 1935 554 4242
 
