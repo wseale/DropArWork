@@ -55,3 +55,6 @@ VOLUME /var/log/vsftpd
 EXPOSE 20 21
 
 CMD ["/usr/sbin/run-vsftpd.sh"]
+
+#now to loop and keep chute open
+CMD ["/bin/bash", "/usr/local/bin/run.sh"]
