@@ -4,19 +4,11 @@
 #FROM paradrop/workshop
 #FROM ddvtech/mistserver
 #FROM r0gger/mistserver
-FROM ubuntu:16.04
-
-RUN set -xe \
-    && apt-get update \
-    && apt-get install -y pure-ftpd \
-    && rm -rf /var/lib/apt/lists/* \
-    && groupadd ftpgroup \
-    && useradd -g ftpgroup -m ftpuser
+#FROM ubuntu:16.04
+FROM bogem/ftp
 
 EXPOSE 21
 #VOLUME /home/ftpuser /etc/pure-ftpd
-
-CMD ["pure-ftpd", "--login", "puredb:/etc/pure-ftpd/pureftpd.pdb", "--createhomedir"]
 
 # Apache site configuration
 #ADD chute/000-default.conf /etc/apache2/sites-available/
