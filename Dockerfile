@@ -4,7 +4,7 @@
 #FROM paradrop/workshop
 #FROM ddvtech/mistserver
 #FROM r0gger/mistserver
-#FROM ubuntu:16.04
+FROM ubuntu:16.04
 #FROM bogem/ftp
 
 #EXPOSE 21
