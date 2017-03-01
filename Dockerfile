@@ -1,9 +1,10 @@
 # Security Cam v2
 #  - Finds ip address webcam - used for detecting motion
 # Version 1.10.00
-FROM paradrop/workshop
+#FROM paradrop/workshop
 #FROM ddvtech/mistserver
 #FROM r0gger/mistserver
+FROM ubuntu:16.04
 
 RUN set -xe \
     && apt-get update \
